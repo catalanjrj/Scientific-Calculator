@@ -13,6 +13,7 @@
 		120200261CC59313006E1EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120200241CC59313006E1EBA /* Main.storyboard */; };
 		120200281CC59313006E1EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 120200271CC59313006E1EBA /* Assets.xcassets */; };
 		1202002B1CC59313006E1EBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 120200291CC59313006E1EBA /* LaunchScreen.storyboard */; };
+		128A1C3E1CC6ABE10010C748 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = 128A1C3D1CC6ABE10010C748 /* CalculatorBrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		120200271CC59313006E1EBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1202002A1CC59313006E1EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1202002C1CC59313006E1EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		128A1C3C1CC6ABE10010C748 /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
+		128A1C3D1CC6ABE10010C748 /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,8 @@
 		1202000F1CC59313006E1EBA = {
 			isa = PBXGroup;
 			children = (
+				128A1C3C1CC6ABE10010C748 /* CalculatorBrain.h */,
+				128A1C3D1CC6ABE10010C748 /* CalculatorBrain.m */,
 				1202001A1CC59313006E1EBA /* Scientific */,
 				120200191CC59313006E1EBA /* Products */,
 			);
@@ -152,6 +157,7 @@
 			files = (
 				120200231CC59313006E1EBA /* ViewController.m in Sources */,
 				120200201CC59313006E1EBA /* AppDelegate.m in Sources */,
+				128A1C3E1CC6ABE10010C748 /* CalculatorBrain.m in Sources */,
 				1202001D1CC59313006E1EBA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +309,7 @@
 				120200311CC59313006E1EBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
