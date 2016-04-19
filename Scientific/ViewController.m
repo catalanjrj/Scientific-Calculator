@@ -46,7 +46,7 @@
 
 -(IBAction)operandTapped:(UIButton*)sender{
     
-    if ([self.displayLabel.text isEqualToString:@"0"]){
+    if ([self.displayLabel.text isEqualToString:@"0"] || brain.userIsTypingNumber){
         self.displayLabel.text = sender.titleLabel.text;
     }else{
         
