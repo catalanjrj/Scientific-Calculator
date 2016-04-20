@@ -36,6 +36,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    brain = [[CalculatorBrain alloc] init];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -45,9 +46,13 @@
 }
 
 -(IBAction)operandTapped:(UIButton*)sender{
-    
-    if ([self.displayLabel.text isEqualToString:@"0"] || brain.userIsTypingNumber){
+    if ( !brain.userIsTypingNumber) {
+        self.displayLabel.text = @"0";
+        
+    }
+    if ([self.displayLabel.text isEqualToString:@"0"] && !([sender.titleLabel.text isEqualToString:@"."]&& !brain.userIsTypingNumber)){
         self.displayLabel.text = sender.titleLabel.text;
+        
     }else{
         
         if([sender.titleLabel.text isEqualToString:@"."] && [self.displayLabel.text
@@ -65,24 +70,27 @@
         }
     
     }
+    brain.userIsTypingNumber = YES;
     //self.displayLabel.text = [self.displayLabel.text integerValue] + [sender.titleLabel.text integerValue];
 
 }
 -(IBAction)additionTapped:(UIButton*)sender{
-    if (!brain){ {brain = [[CalculatorBrain alloc] init];
-    }
-    brain.operatorType = OperatorTypeDivision;
+    
+    brain.operatorType = OperatorTypeAddition;
     brain.operand1String = [self.displayLabel.text mutableCopy];
-        brain.operand1 = [brain.operand1String floatValue];
-         self.displayLabel.text = @"0";
+        brain.operand1 = [brain.operand1String floatValue];\
+    brain.userIsTypingNumber = NO;
+    
+        
    
     }
-}
+
 -(IBAction)subtractionTapped:(UIButton*)sender{
     brain.operatorType = OperatorTypeSubtraction;
     brain.operand1String = [self.displayLabel.text mutableCopy];
     brain.operand1 = [brain.operand1String floatValue];
-     self.displayLabel.text = @"0";
+    brain.userIsTypingNumber = NO;
+    
     
 
 
@@ -91,7 +99,7 @@
     brain.operatorType = OperatorTypeMultiplication;
     brain.operand1String = [self.displayLabel.text mutableCopy];
     brain.operand1 = [brain.operand1String floatValue];
-     self.displayLabel.text = @"0";
+    brain.userIsTypingNumber = NO;
     
 
 }
@@ -99,7 +107,7 @@
     brain.operatorType = OperatorTypeDivision;
     brain.operand1String = [self.displayLabel.text mutableCopy];
     brain.operand1 = [brain.operand1String floatValue];
-     self.displayLabel.text = @"0";
+    brain.userIsTypingNumber = NO;
 
 }
 -(IBAction)equalTapped:(UIButton*)sender{

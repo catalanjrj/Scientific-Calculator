@@ -9,7 +9,20 @@
 #import "CalculatorBrain.h"
 
 @implementation CalculatorBrain
-
+-(instancetype)init{
+    self=[super init];
+    if (self) {
+        _operand1String =[[NSMutableString alloc]init];
+        _operand2String = [[NSMutableString alloc]init];
+        _operand1 = 0.0f;
+        _operand2 = 0.0f;
+        _operatorType = OperatorTypeNone;
+        _userIsTypingNumber = NO;
+        
+    }
+    return self;
+    
+}
 -(NSString*)executeOperationOnOperands{
     if ((![self.operand1String isEqualToString:@""]) &&(![self.operand2String isEqualToString:@""]) && (self.operatorType != OperatorTypeNone)){
         float result;
@@ -38,8 +51,12 @@
                 break;
                 
         }
-        return [NSString stringWithFormat:@"%f",result ];
-}
+        if (![self.operand1String containsString:@"."] && ![self.operand2String containsString:@"."]) {
+            return [NSString stringWithFormat:@"%d",(int)result ];
+        }else{
+        return [NSString stringWithFormat:@"%.2f",result ];
+        }
+    }
     return@"Invalid";
 }
 
