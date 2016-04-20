@@ -1,21 +1,16 @@
-* [ ] additon button does not replace first operand returns invalid.
+##Bugs
 
-		` In IBAction OperatorType is set to Division`
-		`will display 0 becuase button is set to display @"0". Remove line`
-		
+* [] After equal is pressed and next number is input it is added to result
 
-* [ ] subtraction button displays 0 after tapped but retains value of previous operand. displays answer.
-  `subtraction button displays 0 becausedisplayLabel.text is set to @"0". remove line`
-         
-
-
-* [ ] multiplication button displayes 0 after tapped but 
-retains value of previous operand. displays answer 
-`button displays 0 becuase displayLabel.text is set to @"0". remove line`
-
-
-* [ ] Division button diplays 0 after tapped but retains value of previous operand. displays answer.
-`button displays 0 because displayLabel.text is set to @"0". remove line`
+* [] Invalid is returned on first run if no first number is selected.
+* [] result displays with too many decimals for my liking
+* [] if decimal is the first operand there is no 0 in front
 
 
 
+##Solutions
+
+*[] check that OperatorType was set to
+*[] initialized new brain in view did load so that we had a brain object to perform operations
+*[]If neither operand has a decimal then display result as int. If either operand has a decimal then format the result with at least 2-4 decimals
+*[]checked that userIsTypingNumber is set to NO in operandTapped and set the Display to 0
