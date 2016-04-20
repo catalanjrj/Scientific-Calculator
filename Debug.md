@@ -1,16 +1,16 @@
 ##Bugs
 
-* [] After equal is pressed and next number is input it is added to result
+* [x] After equal is pressed and next number is input it is added to result
 
-* [] Invalid is returned on first run if no first number is selected.
-* [] result displays with too many decimals for my liking
-* [] if decimal is the first operand there is no 0 in front
+* [x] Invalid is returned on first run if no first number is selected.
+* [x] result displays with too many decimals for my liking
+* [x] if decimal is the first operand there is no 0 in front
 
 
 
 ##Solutions
 
-*[] check that OperatorType was set to
-*[] initialized new brain in view did load so that we had a brain object to perform operations
-*[]If neither operand has a decimal then display result as int. If either operand has a decimal then format the result with at least 2-4 decimals
-*[]checked that userIsTypingNumber is set to NO in operandTapped and set the Display to 0
+*[x] check that OperatorType was set to
+*[x] initialized new brain in view did load so that we had a brain object to perform operations
+*[x]If neither operand has a decimal then display result as int. If either operand has a decimal then format the result with at least 2-4 decimals
+*[x]checked that userIsTypingNumber is set to NO in operandTapped and set the Display to 0
