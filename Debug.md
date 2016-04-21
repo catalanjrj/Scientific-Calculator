@@ -3,7 +3,8 @@
 * [x] After equal is pressed and next number is input it is added to result
 
 * [x] Invalid is returned on first run if no first number is selected.
-* [x] result displays with too many decimals for my liking
+* [x] result displays with too many decimals for my liking.
+
 * [x] if decimal is the first operand there is no 0 in front
 
 
